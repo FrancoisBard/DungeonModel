@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using DiceLib;
 
-namespace Dungeon
+namespace DungeonModel
 {
     public class SpecialAdvancement
     {
@@ -39,12 +39,12 @@ namespace Dungeon
         public int Id { get; set; }
         public string Name { get; set; }
         public Alignment AllowedAlignments { get; set; }
-        public Die HitDie { get; set; }
+        public DungeonDie HitDie { get; set; }
         public ICollection<Weapon> Weapons { get; set; }
         public ArmorType ArmorProficiency { get; set; }
         public ShieldType ShieldProficiency { get; set; }
         public int SkillsPerLevel { get; set; }
-        public Die StartingGold { get; set; }
+        //public DungeonDie StartingGold { get; set; }
 
         public virtual ICollection<Advancement> Advancements { get; set; }
         public virtual ICollection<Skill> Skills { get; set; }

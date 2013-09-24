@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Dungeon
+namespace DungeonModel
 {
     [Flags]
     public enum AlignmentGoodAxis

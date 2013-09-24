@@ -3,7 +3,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using DiceLib;
 
-namespace Dungeon.Migrations
+namespace DungeonModel.Migrations
 {
     internal sealed class Configuration : DbMigrationsConfiguration<DungeonContext>
     {
@@ -15,17 +15,16 @@ namespace Dungeon.Migrations
 //todo separate Seed in several classes ? need to read Julie again..
         protected override void Seed(DungeonContext context)
         {
-
             //races
             context.Races.AddOrUpdate(
                 c => c.Name,
-                new Race { Name = "Dwarf"},
-                new Race { Name = "Elf"},
-                new Race { Name = "Gnome"},
-                new Race { Name = "Half-Elf"},
-                new Race { Name = "Half-Orc"},
-                new Race { Name = "Halfling"},
-                new Race { Name = "Human"}
+                new Race { Name = "Dwarf", Description = "test"},
+                new Race { Name = "Elf", Description = "test" },
+                new Race { Name = "Gnome", Description = "test" },
+                new Race { Name = "Half-Elf", Description = "test" },
+                new Race { Name = "Half-Orc", Description = "test" },
+                new Race { Name = "Halfling", Description = "test" },
+                new Race { Name = "Human", Description = "test" }
                 );
 
             //maybe i should write a helper to generate the advancements for each character class. The progressions are always the same no ?
@@ -61,7 +60,7 @@ namespace Dungeon.Migrations
                         Advancements = null, //todo
                         AllowedAlignments = Alignment.All, //unsure...
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium,
-                        HitDie = new Die(12),
+                        HitDie = new DungeonDie(12),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy,
                         Skills = new List<Skill>(), //todo
                         SkillsPerLevel = 4,
@@ -73,7 +72,7 @@ namespace Dungeon.Migrations
                         Advancements = null, //todo
                         AllowedAlignments = Alignment.NonLawful,
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium,
-                        HitDie = new Die(6),
+                        HitDie = new DungeonDie(6),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy,
                         Skills = new List<Skill>(), //todo
                         SkillsPerLevel = 4,
@@ -85,7 +84,7 @@ namespace Dungeon.Migrations
                         Advancements = null, //todo
                         AllowedAlignments = Alignment.All, //unsure...
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium,
-                        HitDie = new Die(12),
+                        HitDie = new DungeonDie(12),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy,
                         Skills = new List<Skill>(), //todo
                         SkillsPerLevel = 4,
@@ -97,7 +96,7 @@ namespace Dungeon.Migrations
                         Advancements = null, //todo
                         AllowedAlignments = Alignment.All, //unsure...
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium,
-                        HitDie = new Die(12),
+                        HitDie = new DungeonDie(12),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy,
                         Skills = new List<Skill>(), //todo
                         SkillsPerLevel = 4,
@@ -109,7 +108,7 @@ namespace Dungeon.Migrations
                         Advancements = fighterAdvancement,
                         AllowedAlignments = Alignment.All,
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium | ArmorType.Heavy,
-                        HitDie = new Die(10),
+                        HitDie = new DungeonDie(10),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy | ShieldType.Tower,
                         Skills = new List<Skill>(), //climb, craft, handleAnimal, intimidate, jump, ride, swim,
                         SkillsPerLevel = 2,
@@ -121,7 +120,7 @@ namespace Dungeon.Migrations
                         Advancements = null, //todo
                         AllowedAlignments = Alignment.All, //unsure...
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium,
-                        HitDie = new Die(12),
+                        HitDie = new DungeonDie(12),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy,
                         Skills = new List<Skill>(), //todo
                         SkillsPerLevel = 4,
@@ -133,7 +132,7 @@ namespace Dungeon.Migrations
                         Advancements = null, //todo
                         AllowedAlignments = Alignment.All, //unsure...
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium,
-                        HitDie = new Die(12),
+                        HitDie = new DungeonDie(12),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy,
                         Skills = new List<Skill>(), //todo
                         SkillsPerLevel = 4,
@@ -145,7 +144,7 @@ namespace Dungeon.Migrations
                         Advancements = null, //todo
                         AllowedAlignments = Alignment.All, //unsure...
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium,
-                        HitDie = new Die(12),
+                        HitDie = new DungeonDie(12),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy,
                         Skills = new List<Skill>(), //todo
                         SkillsPerLevel = 4,
@@ -157,7 +156,7 @@ namespace Dungeon.Migrations
                         Advancements = null, //todo
                         AllowedAlignments = Alignment.All, //unsure...
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium,
-                        HitDie = new Die(12),
+                        HitDie = new DungeonDie(12),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy,
                         Skills = new List<Skill>(), //todo
                         SkillsPerLevel = 4,
@@ -169,7 +168,7 @@ namespace Dungeon.Migrations
                         Advancements = null, //todo
                         AllowedAlignments = Alignment.All, //unsure...
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium,
-                        HitDie = new Die(12),
+                        HitDie = new DungeonDie(12),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy,
                         Skills = new List<Skill>(), //todo
                         SkillsPerLevel = 4,
@@ -181,7 +180,7 @@ namespace Dungeon.Migrations
                         Advancements = null, //todo
                         AllowedAlignments = Alignment.All, //unsure...
                         ArmorProficiency = ArmorType.Light | ArmorType.Medium,
-                        HitDie = new Die(12),
+                        HitDie = new DungeonDie(12),
                         ShieldProficiency = ShieldType.Light | ShieldType.Heavy,
                         Skills = new List<Skill>(), //todo
                         SkillsPerLevel = 4,

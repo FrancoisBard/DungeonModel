@@ -1,8 +1,8 @@
-﻿namespace Dungeon
+﻿namespace DungeonModel
 {
     public class Feat
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Requirements { get; set; }
         public bool Multi1 { get; set; } //multiselection

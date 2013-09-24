@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Dungeon
+namespace DungeonModel
 {
     //should we separate character and character state
     //should we have two states (a base state and a current state)?

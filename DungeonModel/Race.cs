@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Dungeon
+namespace DungeonModel
 {
     public class Race
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public Size Size { get; set; }
-        public Speed Speed { get; set; }
-        public int LevelAdjustment { get; set; }
-        public int Space { get; set; } //feet ? inches ? both (complex type ?)
-        public int Reach { get; set; } //btw Space and Reach aren't just consequences of the Size ? 
+        //public Size Size { get; set; }
+        ////public Speed Speed { get; set; }
+        //public int LevelAdjustment { get; set; }
+        //public int Space { get; set; } //feet ? inches ? both (complex type ?)
+        //public int Reach { get; set; } //btw Space and Reach aren't just consequences of the Size ? 
 
-        //Bonuses and others
-        public Ability AbilityAdjustments { get; set; }
-        public Language AutomaticLanguages { get; set; }
-        public Language BonusLanguages { get; set; }
-        public Vision Vision { get; set; }
-        public virtual ICollection<Feat> Feats { get; set; }
-        public virtual ICollection<SkillBonus> SkillBonuses { get; set; }
+        ////Bonuses and others
+        //public Ability AbilityAdjustments { get; set; }
+        //public Language AutomaticLanguages { get; set; }
+        //public Language BonusLanguages { get; set; }
+        //public Vision Vision { get; set; }
+        //public virtual ICollection<Feat> Feats { get; set; }
+        //public virtual ICollection<SkillBonus> SkillBonuses { get; set; }
 
-        public virtual ICollection<OtherCharacteristic> Others { get; set; }
+        //public virtual ICollection<OtherCharacteristic> Others { get; set; }
     }
 
     [Flags]
@@ -69,9 +69,15 @@ namespace Dungeon
         Colossal = 128,
     }
 
-    public class Speed
-    {
-        //public Medium Medium { get; set; }
-        //public MediumSpeed Medium { get; set; }
-    }
+    //public class Speed
+    //{
+    //    public Medium Medium { get; set; }
+    //    //public MediumSpeed Medium { get; set; }
+    //}
+
+    ////todo
+    //public enum Medium
+    //{
+    //    None = 0
+    //}
 }
