@@ -9,10 +9,11 @@ namespace DungeonModel.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true; //todo when i start publishing the code, turn it back to false
+            //change it to false when the code has reached a certain stability
+            AutomaticMigrationsEnabled = true; 
         }
 
-//todo separate Seed in several classes ? need to read Julie again..
+        //todo separate Seed in several classes ? need to read Julie again..
         protected override void Seed(DungeonContext context)
         {
             //races

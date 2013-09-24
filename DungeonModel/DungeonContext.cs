@@ -11,12 +11,13 @@ namespace DungeonModel
         public DbSet<Weapon> Weapons { get; set; }
         public DbSet<Race> Races { get; set; }
 
+        //hack for LinqPad...
+        public DungeonContext() : base("DungeonModel.DungeonContext") { }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ComplexType<DungeonDie>();
-            //modelBuilder.ComplexType<DungeonDie>().Property(d => d.Faces).IsOptional();
-            //todo entity framework try to set the int to 0, and it fails....
         }
     }
 }
